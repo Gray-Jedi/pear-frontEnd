@@ -27,7 +27,7 @@ function ProductScreen({ match, history }) {
 
 
   return (
-    <div>
+    <div className='mt-5'>
       <Link to="/" className="btn btn-light my-3">Go Back</Link>
         {loading ?
             <Loader />

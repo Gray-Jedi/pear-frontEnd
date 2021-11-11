@@ -32,7 +32,7 @@ function CartScreen({ match, location, history }) {
     }
     
     return (
-        <Row>
+        <Row className='mt-5'>
             <Col md={8}>
                 <h1>Shopping Cart</h1>
                 {cartItems.length === 0 ? (
@@ -90,7 +90,7 @@ function CartScreen({ match, location, history }) {
             </Col>
             <Col md={4}>
                 <Col>
-                    <Card>
+                    <Card className='mt-5'>
                         <ListGroup variant='flush'>
                             <ListGroup.Item>
                                 <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h2>

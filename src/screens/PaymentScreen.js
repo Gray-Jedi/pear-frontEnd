@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-// import { Link } from 'react-router-dom'
-import { Form, Button, Col } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Form, Button, ButtonGroup, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
@@ -31,7 +31,7 @@ function PaymentScreen({ history }) {
             <CheckoutSteps step1 step2 step3 />
             
             <Form onSubmit={submitHandler}>
-                <Form.Group>
+                <Form.Group className="mt-5">
                     <Form.Label as='legend'>Select Method</Form.Label>
                     <Col>
                         <Form.Check
@@ -46,10 +46,20 @@ function PaymentScreen({ history }) {
                         </Form.Check>
                     </Col>
                 </Form.Group>
-                <Button type='submit' variant='primary'>
-                    Continue
-                </Button>
 
+                <ButtonGroup vertical className="mt-5">
+                   
+                    <Button type='submit' variant='primary'>
+                        Continue
+                    </Button>
+
+                     <Link to="/inbox">
+                        <Button variant='dark' className="mt-3">
+                            Discuss With Seller
+                        </Button>
+                    </Link>
+
+                </ButtonGroup>
             </Form>
         </FormContainer>
     )
