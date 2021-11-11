@@ -1,7 +1,8 @@
 import React from 'react';
 import BGPhoto from './images/green-bg.jpg';
+import BGPhoto1 from './images/green-bg.jpg';
 import Tony from './images/tony.jpg';
-import Kevin from './images/kevin.png';
+import Kevin from './images/kevin.jpg';
 import Marie from './images/marie.jpg';
 import Garfield from './images/garfield.jpg';
 import '../styles/About.css';
@@ -23,7 +24,7 @@ function AboutScreen() {
             <img src={Kevin} alt="img" className="profile-img" />
             <h1>Kevin Henry</h1>
             <p className="job-title-aloy">Software Developer</p>
-            <p className="about">Lorem ipsum dolor sit amet, quo tempor luptatum verterem et. Vis nostrum deterruisset eu. Ne quaeque accommodare per, an vix omnis reprehendunt comprehensam. Dolores honestatis an pri, nulla aliquam id his. Est ea justo deleniti oporteat.</p>
+            <p className="about">I'm an Army Veteran with a background in opertions and program management. Currently working in people operations. I have a love of all things tech, and I started learning development to to grow my skillset. Now, through the past year with CodeFellows and my classmates, I see that there is a place for coding in most things we haven't imagined yet.</p>
             <ul className="social-media">
               <li><a href="https://www.linkedin.com/in/a-todd-charliemike/" target="blank"><i className="fab fa-linkedin-in"></i></a></li>
               <li><a href="https://github.com/AL0YSI0US" target="blank"><i className="fab fa-github-square"></i></a></li>
@@ -37,7 +38,7 @@ function AboutScreen() {
             <img src={Garfield} alt="img" className="profile-img" />
             <h1>Garfield Grant</h1>
             <p className="job-title">Software Developer</p>
-            <p className="about">Lorem ipsum dolor sit amet, quo tempor luptatum verterem et. Vis nostrum deterruisset eu. Ne quaeque accommodare per, an vix omnis reprehendunt comprehensam. Dolores honestatis an pri, nulla aliquam id his. Est ea justo deleniti oporteat.</p>
+            <p className="about">I am an Senior Integration Consultant. I live in Wa. Spent  8 years In the United States Military.</p>
             <ul className="social-media">
               <li><a href="https://www.linkedin.com/in/matthew-santorsola/" target="blank"><i className="fab fa-linkedin-in"></i></a></li>
               <li><a href="https://github.com/santorsm" target="blank"><i className="fab fa-github-square"></i></a></li>

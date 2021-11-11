@@ -23,7 +23,7 @@ function Header() {
       {/* <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect> */}
         <Container>
           <LinkContainer to='/'>
-            <Navbar.Brand href="/">PEAR</Navbar.Brand>
+            <Navbar.Brand className="brand" href="/">PEAR</Navbar.Brand>
           </LinkContainer>
     
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -32,9 +32,17 @@ function Header() {
             {/* <Nav className='ml-auto'> */}
             <Nav className="mr-auto">
 
-              <Nav.Link href="/post">
+            <Nav.Link href="/">
+                <i className="fa fa-home"></i> Home
+              </Nav.Link>
+
+              <Nav.Link href="/create">
                 <i className="fa fa-cog"></i> List
               </Nav.Link>
+
+              {/* <Nav.Link href="/post">
+                <i className="fa fa-cog"></i> List
+              </Nav.Link> */}
               
               <Nav.Link href="/cart">
                 <i className="fas fa-shopping-cart"></i> Cart
@@ -46,9 +54,9 @@ function Header() {
               {/* <Nav.Link href="/register">
                 <i className="fas fa-user"></i> Register
               </Nav.Link> */}
-              {/* <Nav.Link href="/otherstuffhere">
+              <Nav.Link href="/otherstuffhere">
                 <i className="fas fa-user"></i> Customer
-              </Nav.Link> */}
+              </Nav.Link>
               {/* <Nav.Link href="/otherstuffhere">
                 Customer
               </Nav.Link> */}
@@ -58,6 +66,9 @@ function Header() {
               <Nav.Link href="/about">
                 <i className="fas fa-info"></i> About
               </Nav.Link>
+              
+              
+{/* Tony Code
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id='username'>
                   <LinkContainer to='/profile'>
@@ -70,6 +81,43 @@ function Header() {
                 <i className="fas fa-users"></i> Login
                 </Nav.Link>
               )}              
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </header>
+  );
+} */}
+
+{/* // Marie code // */}
+              {userInfo ? (
+                <NavDropdown title={userInfo.name} id='username'>
+                  <LinkContainer to='/profile'>
+                    <NavDropdown.Item>My Profile</NavDropdown.Item>
+                  </LinkContainer>
+                  <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
+                </NavDropdown>
+              ): (
+                <Nav.Link href="/login">
+                <i className="fas fa-users"></i> Login
+                </Nav.Link>
+              )}      
+              {userInfo && userInfo.isAdmin && (
+                <NavDropdown title='Admin' id='adminmenu'>
+                  <LinkContainer to='/admin/userlist'>
+                    <NavDropdown.Item>Users</NavDropdown.Item>
+                  </LinkContainer>
+
+                  <LinkContainer to='/admin/productlist'>
+                    <NavDropdown.Item>Products</NavDropdown.Item>
+                  </LinkContainer>
+
+                  <LinkContainer to='/admin/orderlist'>
+                    <NavDropdown.Item>Orders</NavDropdown.Item>
+                  </LinkContainer>
+                  
+                </NavDropdown>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

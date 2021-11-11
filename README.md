@@ -2,10 +2,10 @@
 
 ## Team: Grey Jedi
 
-- Kevin Henry
-- Garfield Grant
-- Marie Marcos
-- Tony Regaldo
+- [Kevin Henry](https://github.com/kevinhenry)
+- [Garfield Grant](https://github.com/Marleyman876)
+- [Marie Marcos](https://github.com/Mmarcos01)
+- [Tony Regaldo](https://github.com/Edward-Regalado)
 
 ## Problem Domain
 
@@ -17,13 +17,13 @@ Pear is a peer to peer E-Commerce app that empowers users to post listings for t
 
 ## MVP
 
-- Display a storefront.
-- Display static and dynamic pages.
-- User management (email, registration).
-- Enable users to create a listing.
-- Enable users to search for items.
-- Place an item in a shopping cart from a listing.
-- Present a location to conduct the transaction.
+[x] Display a storefront.
+[x] Display static and dynamic pages.
+[x] User management (email, registration).
+[x] Enable users to create a listing.
+[x] Enable users to search for items.
+[x] Place an item in a shopping cart from a listing.
+[WIP] Present a location to conduct the transaction.
 
 ## Useful Links
 
@@ -31,4 +31,8 @@ Pear is a peer to peer E-Commerce app that empowers users to post listings for t
 
 - [Repo](https://github.com/Marleyman876/pear)
 
-## Working frontend
+## Challenges Faced
+
+- Some of the Challenges we faced are mostly based on functionality. We Wanted to implement a P2P chat feature between users but learning sockets in sucha short ime proved to be a significant challenge.
+
+- We also faced some challegenges in gettin the back and front end to tie in which we were able to fix.
