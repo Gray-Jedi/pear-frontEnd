@@ -16,6 +16,10 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
 import AboutScreen from "./screens/AboutScreen";
 import PostScreen from "./screens/PostScreen";
+import CreateScreen from "./screens/CreateScreen";
+import UserListScreen from "./screens/UserListScreen";
+import PostListScreen from "./screens/PostListScreen";
+import InboxScreen from "./screens/InboxScreen";
 
 
 
@@ -35,9 +39,13 @@ function App() {
           <Route path="/payment" component={PaymentScreen} />
           <Route path="/product/:id" component={ProductScreen} />
           <Route path="/cart/:id?" component={CartScreen} />
+          <Route path="/admin/userlist" component={UserListScreen} />
+          <Route path="/admin/productlist" component={PostListScreen} />
           <Route path="/otherstuffhere/" component={DoStuffScreen} />
           <Route path="/about/" component={AboutScreen} />
           <Route path="/post/" component={PostScreen} />
+          <Route path="/create/" component={CreateScreen} />
+          <Route path="/inbox/" component={InboxScreen} />
         </Container>
       </main>
       <Footer />

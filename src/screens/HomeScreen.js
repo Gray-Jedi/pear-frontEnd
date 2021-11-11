@@ -23,22 +23,22 @@ function HomeScreen() {
     <div>
         <Navbar aria-controls="basic-navbar-nav">
               <Nav.Link href="/about">
-                <i className="fa fa-video-camera" aria-hidden="true"></i> Electronics and Media
+                <i class="fa fa-camera-retro" aria-hidden="true"></i> Electronics and Media
               </Nav.Link>
               <Nav.Link href="/login">
                 <i className="fa fa-home"></i> Home and Garden
               </Nav.Link>
               <Nav.Link href="/otherstuffhere">
-                <i className="fas fa-user"></i> Clothing and Accessories
+                <i className="fas fa-tshirt"></i> Clothing and Accessories
               </Nav.Link>
               <Nav.Link href="/register">
                 <i className="fas fa-user"></i> Toys and Games
               </Nav.Link>
               <Nav.Link href="/register">
-                <i className="fas fa-user"></i> Sports and Outdoors
+                <i className="fas fa-football-ball"></i> Sports and Outdoors
               </Nav.Link>
               <Nav.Link href="/register">
-                <i className="fas fa-user"></i> Services
+                <i class="fa fa-life-ring" aria-hidden="true"></i> Trades and Services
               </Nav.Link>
         </Navbar>
       <h1>Latest Products</h1>

@@ -52,9 +52,9 @@ function PlaceOrderScreen({ history }) {
                     <ListGroup variant='flush' >
 
                         <ListGroup.Item>
-                            <h2>Shipping</h2>
+                            <h2>Billing Address</h2>
                             <p>
-                                <strong>Shipping: </strong>
+                                <strong>Address: </strong>
                                 {cart.shippingAddress.address}, {cart.shippingAddress.city}
                                 {'  '}
                                 {cart.shippingAddress.postal},
@@ -115,12 +115,12 @@ function PlaceOrderScreen({ history }) {
                                 </Row>
                             </ListGroup.Item>
 
-                            <ListGroup.Item>
+                            {/* <ListGroup.Item>
                                 <Row>
                                     <Col>Shipping:</Col>
                                     <Col>${cart.shippingPrice}</Col>
                                 </Row>
-                            </ListGroup.Item>
+                            </ListGroup.Item> */}
 
                             <ListGroup.Item>
                                 <Row>
