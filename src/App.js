@@ -10,7 +10,7 @@ import RegisterScreen from "./screens/RegisterScreen";
 import CartScreen from "./screens/CartScreen"
 import DoStuffScreen from "./screens/DoStuffScreen"
 import ProfileScreen from './screens/ProfileScreen';
-import ShippingScreen from './screens/ShippingScreen';
+import LocationScreen from './screens/LocationScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import OrderScreen from './screens/OrderScreen';
@@ -33,7 +33,7 @@ function App() {
           <Route path="/login" component={LoginScreen} />
           <Route path="/register" component={RegisterScreen} />
           <Route path="/profile" component={ProfileScreen} />
-          <Route path="/shipping" component={ShippingScreen} />
+          <Route path="/location" component={LocationScreen} />
           <Route path="/placeorder" component={PlaceOrderScreen} />
           <Route path="/order/:id" component={OrderScreen} />
           <Route path="/payment" component={PaymentScreen} />

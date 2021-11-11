@@ -20,28 +20,28 @@ function HomeScreen() {
   }, [dispatch]);
   
   return (
-    <div>
+    <div className='mt-3'>
         <Navbar aria-controls="basic-navbar-nav">
-              <Nav.Link href="/about">
+              <Nav.Link href="/">
                 <i class="fa fa-camera-retro" aria-hidden="true"></i> Electronics and Media
               </Nav.Link>
-              <Nav.Link href="/login">
+              <Nav.Link href="/">
                 <i className="fa fa-home"></i> Home and Garden
               </Nav.Link>
-              <Nav.Link href="/otherstuffhere">
+              <Nav.Link href="/">
                 <i className="fas fa-tshirt"></i> Clothing and Accessories
               </Nav.Link>
-              <Nav.Link href="/register">
+              <Nav.Link href="/">
                 <i className="fas fa-user"></i> Toys and Games
               </Nav.Link>
-              <Nav.Link href="/register">
+              <Nav.Link href="/">
                 <i className="fas fa-football-ball"></i> Sports and Outdoors
               </Nav.Link>
-              <Nav.Link href="/register">
+              <Nav.Link href="/">
                 <i class="fa fa-life-ring" aria-hidden="true"></i> Trades and Services
               </Nav.Link>
         </Navbar>
-      <h1>Latest Products</h1>
+      <h1 className='mt-5'>Latest Products</h1>
       {loading ? <Loader />
           : error ? <ErrorMessage variant='danger'>{error}</ErrorMessage>
               :  
