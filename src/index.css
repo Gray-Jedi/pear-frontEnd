@@ -16,6 +16,11 @@ h3 {
   padding: 1rem 0;
 }
 
+brand {
+  font-family: "Major Mono Display", monospace;
+  font-size: 1.8rem;
+}
+
 .rating span {
   margin: 0.1rem;
 }

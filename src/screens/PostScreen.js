@@ -45,6 +45,7 @@ function Post({ match, history }) {
             history.push('/admin/productlist')
         } else {
             if (!product.name || product._id !== Number(productId)) {
+            // if (!product.name || product._id !== Number(productId)) {
                 dispatch(listProductDetails(productId))
             } else {
                 setName(product.name)
