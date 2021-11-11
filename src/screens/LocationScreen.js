@@ -4,23 +4,23 @@ import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer';
 import CheckoutSteps from '../components/CheckoutSteps';
-import { saveShippingAddress } from '../actions/cartAction'
+import { saveLocationAddress } from '../actions/cartAction'
 
-function ShippingScreen( {history }) {
+function LocationScreen( {history }) {
 
     const cart = useSelector(state => state.cart)
-    const { shippingAddress } = cart
+    const { locationAddress } = cart
 
     const dispatch = useDispatch()
     
-    const [ address, setAddress ] = useState(shippingAddress.address)
-    const [ city, setCity ] = useState(shippingAddress.city)
-    const [ postalCode, setPostal ] = useState(shippingAddress.postalCode)
-    const [ country, setCountry ] = useState(shippingAddress.country)
+    const [ address, setAddress ] = useState(locationAddress.address)
+    const [ city, setCity ] = useState(locationAddress.city)
+    const [ postalCode, setPostal ] = useState(locationAddress.postalCode)
+    const [ country, setCountry ] = useState(locationAddress.country)
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(saveShippingAddress({ address, city, postalCode, country }))
+        dispatch(saveLocationAddress({ address, city, postalCode, country }))
         history.push('/payment')
     }
     
@@ -87,4 +87,4 @@ function ShippingScreen( {history }) {
     )
 }
 
-export default ShippingScreen
+export default LocationScreen

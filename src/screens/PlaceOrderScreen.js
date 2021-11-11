@@ -16,7 +16,7 @@ function PlaceOrderScreen({ history }) {
 
     // calculate checkout cart items
     cart.itemsPrice = cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
-    cart.shippingPrice = (cart.itemsPrice > 100 ? 0 : 10).toFixed(2)
+    // cart.shippingPrice = (cart.itemsPrice > 100 ? 0 : 10).toFixed(2)
     cart.taxPrice = Number((0.05) * cart.itemsPrice).toFixed(2)
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.taxPrice)).toFixed(2)
 
@@ -35,10 +35,10 @@ function PlaceOrderScreen({ history }) {
     const placeOrder = () => {
         dispatch(createOrder({
             orderItems: cart.cartItems,
-            shippingAddress: cart.shippingAddress,
+            locationAddress: cart.locationAddress,
             paymentMethod: cart.paymentMethod,
             itemsPrice: cart.itemsPrice,
-            shippingPrice: cart.shippingPrice,
+            // shippingPrice: cart.shippingPrice,
             taxPrice: cart.taxPrice,
             totalPrice: cart.totalPrice,
         }))
@@ -54,11 +54,11 @@ function PlaceOrderScreen({ history }) {
                         <ListGroup.Item>
                             <h2>Location Address</h2>
                             <p>
-                                {cart.shippingAddress.address}, {cart.shippingAddress.city}
+                                {cart.locationAddress.address}, {cart.locationAddress.city}
                                 {'  '}
-                                {cart.shippingAddress.postal},
+                                {cart.locationAddress.postal},
                                 {' '}
-                                {cart.shippingAddress.country}
+                                {cart.locationAddress.country}
                             </p>
                         </ListGroup.Item>
 

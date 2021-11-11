@@ -28,10 +28,12 @@ function CartScreen({ match, location, history }) {
     }
 
     const checkoutHandler = () => {
-        history.push('/login?redirect=shipping')
+        history.push('/login?redirect=location')
     }
     
     return (
+        <div>
+        <Link to="/" className="btn btn-light my-3">Go Back</Link>
         <Row className='mt-5'>
             <Col md={8}>
                 <h1>Shopping Cart</h1>
@@ -40,7 +42,7 @@ function CartScreen({ match, location, history }) {
                         Your cart is empty <Link to='/'>Go Back</Link>
                     </EmptyCartMessage>
                 )  : (
-                    <listGroup variant='flush'>
+                    <ListGroup variant='flush'>
                         {cartItems.map(item => (
                             <ListGroup.Item key={item.product}>
                                 <Row>
@@ -85,7 +87,7 @@ function CartScreen({ match, location, history }) {
                                 </Row>
                             </ListGroup.Item>
                         ))}
-                    </listGroup>
+                    </ListGroup>
                 )}
             </Col>
             <Col md={4}>
@@ -112,6 +114,7 @@ function CartScreen({ match, location, history }) {
                 </Col>
             </Col>
         </Row>
+        </div>
     )
 }
 
