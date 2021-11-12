@@ -30,19 +30,16 @@ function OrderScreen({ match }) {
         script.type = 'text/javascript'
         script.src = 'https://www.paypal.com/sdk/js?client-id=Abb2wYX_2vu-3FlSyCcixwMep3_ZIBWewMJ3bWTnyxHggdCjyJTPIU8dzovFjjOzE4l3EjvxtUDFIleg'
         script.async = true
-        //ensure software development kit is ready for paypal, then append the script
         script.onload = () => {
             setSdkReady(true) 
         }
         document.body.appendChild(script)
     }
 
-    // Marie Code
     useEffect(() => {
         if(!order || successPay || order._id !== Number(orderId)){
             dispatch({type: ORDER_PAY_RESET})
             dispatch(getOrderDetails(orderId))
-        // if order not paid, load paypal buttons
         }else if(!order.isPaid){
             if(!window.paypal){
                 addPayPalScript()
@@ -56,36 +53,28 @@ function OrderScreen({ match }) {
         dispatch(payOrder(orderId, paymentResult))
     }
 
-
-    // Tony Code
-    // useEffect(() => {
-    //     if(!order || order._id !== Number(orderId)){
-    //         dispatch(getOrderDetails(orderId))
-    //     }
-    // }, [order, orderId])
-
     return loading ? (
         <Loader/>
     ) : error ? (
         <ErrorMessage variant='danger'>{error}</ErrorMessage>
     ) : (
-        <div>
-            <h2>Order: {order._id}</h2>
+        <div className='mt-5'>
+            <h2 style={{ color: 'gray' }}>Order # {order._id}</h2>
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush' >
 
                         <ListGroup.Item>
-                            <h2>Billing Address</h2>
+                            <h2>Location Address</h2>
                             <p><strong>Name: </strong> {order.user.name}</p>
                             <p><strong>Email: </strong><a href={`mailto:${order.user.email} `}>{order.user.email}</a></p>
                             <p>
-                                <strong>Billing Address: </strong>
-                                {order.shippingAddress.address}, {order.shippingAddress.city}
+                                <strong>Location Address: </strong>
+                                {order.locationAddress.address}, {order.locationAddress.city}
                                 {' '}
-                                {order.shippingAddress.postal},
+                                {order.locationAddress.postal},
                                 {' '}
-                                {order.shippingAddress.country}
+                                {order.locationAddress.country}
                             </p>
                             {order.isDelivered ? (
                                 <Message variant='success'>Delivered on {order.deliveredAt}</Message>
@@ -106,19 +95,6 @@ function OrderScreen({ match }) {
                                 <Message variant='warning'> Not Paid</Message>
                             )}
                         </ListGroup.Item>
-
-                        {/* <ListGroup.Item>
-                            <h2>Payment Method</h2>
-                            <p>
-                                <strong>Method: </strong>
-                                {order.paymentMethod}
-                            </p>
-                            {order.isPaid ? (
-                                <Message variant='success'>Paid on {order.paidAt}</Message>
-                            ) : (
-                                <Message variant='warning'> Not Paid</Message>
-                            )}
-                        </ListGroup.Item> */}
 
                         <ListGroup.Item>
                             <h2>Order Items</h2>
@@ -146,7 +122,6 @@ function OrderScreen({ match }) {
                             )}
                         </ListGroup.Item>
 
-
                     </ListGroup>
                 </Col>
 
@@ -164,13 +139,6 @@ function OrderScreen({ match }) {
                                     <Col>${order.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
-
-                            {/* <ListGroup.Item>
-                                <Row>
-                                    <Col>Billing Address:</Col>
-                                    <Col>${order.shippingPrice}</Col>
-                                </Row>
-                            </ListGroup.Item> */}
 
                             <ListGroup.Item>
                                 <Row>

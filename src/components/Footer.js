@@ -7,9 +7,8 @@ function Footer() {
       <footer>
         <Container>
           <Row>
-            {/* <Col className="text-center py-3">Copyright &copy; OurShop</Col> */}
             <Col className="footer-copyright text-center py-3">Made with ❤ by Team Gray Jedi  
-        <a href="https://about.me/pear" target="_blank" rel="noopener noreferrer" className="author"> Team Gray Jedi</a>
+              <a href="https://about.me/pear" target="_blank" rel="noopener noreferrer" className="author"> Team Gray Jedi</a>
             </Col>
           </Row>
         </Container>
