@@ -22,7 +22,6 @@ Pear is a peer to peer E-Commerce app that empowers users to post listings for t
 ![Create](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Create.jpg)
 ![CompletedOrder](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/CompletedOrder.jpg)
 ![Profile](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Profile.jpg)
-![Landing](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Landing.jpg)
 
 ## MVP
 
