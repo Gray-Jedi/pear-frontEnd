@@ -36,3 +36,5 @@ Pear is a peer to peer E-Commerce app that empowers users to post listings for t
 - Some of the Challenges we faced are mostly based on functionality. We Wanted to implement a P2P chat feature between users but learning sockets in sucha short ime proved to be a significant challenge.
 
 - We also faced some challegenges in gettin the back and front end to tie in which we were able to fix.
+
+## And another thing
