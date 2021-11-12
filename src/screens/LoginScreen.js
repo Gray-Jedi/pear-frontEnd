@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Form, Button, Row, Col } from 'react-bootstrap'
-
 import { useDispatch, useSelector } from 'react-redux'
-
 import { ErrorMessage }from '../components/Message'; // Error handling
 import Loader from '../components/Loader';  // Error handling
 import FormContainer from '../components/FormContainer';

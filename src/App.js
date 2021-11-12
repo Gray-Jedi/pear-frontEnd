@@ -8,7 +8,6 @@ import ProductScreen from "./screens/ProductScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import CartScreen from "./screens/CartScreen"
-import DoStuffScreen from "./screens/DoStuffScreen"
 import ProfileScreen from './screens/ProfileScreen';
 import LocationScreen from './screens/LocationScreen';
 import PaymentScreen from './screens/PaymentScreen';
@@ -41,7 +40,6 @@ function App() {
           <Route path="/cart/:id?" component={CartScreen} />
           <Route path="/admin/userlist" component={UserListScreen} />
           <Route path="/admin/productlist" component={PostListScreen} />
-          <Route path="/otherstuffhere/" component={DoStuffScreen} />
           <Route path="/about/" component={AboutScreen} />
           <Route path="/post/" component={PostScreen} />
           <Route path="/create/" component={CreateScreen} />

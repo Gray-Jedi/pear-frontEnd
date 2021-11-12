@@ -1,6 +1,5 @@
 import React from 'react';
 import BGPhoto from './images/green-bg.jpg';
-import BGPhoto1 from './images/green-bg.jpg';
 import Tony from './images/tony.jpg';
 import Kevin from './images/kevin.jpg';
 import Marie from './images/marie.jpg';

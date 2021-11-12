@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-// import { LinkContainer } from 'react-router-bootstrap';
-// import { Table, Button, Row, Col } from 'react-bootstrap'
 import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-// import Message from '../components/Message'; // Error handling
-// import { Message, ErrorMessage, PasswordMessage }from '../components/Message'; // Error handling
 import { Message } from '../components/Message'; // Error handling
 import Loader from '../components/Loader';  // Error handling
 import FormContainer from '../components/FormContainer';
@@ -18,7 +14,6 @@ function Post({ match, history }) {
 
     const productId = match.params.id
     
-    // const [user, setUser] = useState('')
     const [name, setName] = useState('')
     const [price, setPrice] = useState(0)
     const [image, setImage] = useState('')
@@ -27,7 +22,6 @@ function Post({ match, history }) {
     const [countInStock, setCountInStock] = useState(0)
     const [description, setDescription] = useState('')
     const [uploading, setUploading] = useState(false)
-    // const [createdAt, setCreatedAt] = useState('')
     
     const dispatch = useDispatch()
 
@@ -45,7 +39,6 @@ function Post({ match, history }) {
             history.push('/admin/productlist')
         } else {
             if (!product.name || product._id !== Number(productId)) {
-            // if (!product.name || product._id !== Number(productId)) {
                 dispatch(listProductDetails(productId))
             } else {
                 setName(product.name)
@@ -231,100 +224,3 @@ function Post({ match, history }) {
 }
 
 export default Post
-
-
-
-
-
-//         <FormContainer fluid="md">
-//             <Form>
-//                 <h1>List Your Item</h1>
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Title</Form.Label>
-//                     <Form.Control type="text" placeholder="Title" />
-//                     <Form.Text className="text-muted">
-//                     Create a title that will attract interest!
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="brand">
-//                     <Form.Label>Brand</Form.Label>
-//                     <Form.Control
-//                         required
-//                         type="text"
-//                         placeholder="Brand"
-//                         value={brand}
-//                         onChange={(e) => setbrand(e.target.value)}
-//                     />
-//                     <Form.Text className="text-muted">
-//                     Brand if you know it; otherwise, leave blank.
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 {/* <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Brand</Form.Label>
-//                     <Form.Control type="text" placeholder="Brand" />
-//                     <Form.Text className="text-muted">
-//                     Brand if you know it; otherwise, leave blank.
-//                     </Form.Text>
-//                 </Form.Group> */}
-
-//                 {/* This will be a selection with a pull down of avail categories */}
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Category</Form.Label>
-//                     <Form.Control type="text" placeholder="Choose item category" />
-//                     <Form.Text className="text-muted">
-//                     More categories soon!
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Description</Form.Label>
-//                     <Form.Control type="text" placeholder="Write a description" />
-//                     <Form.Text className="text-muted">
-//                     Write a detailed description of your item. You can break down your item into compoents in case you are willing to sell them seperately!
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Price</Form.Label>
-//                     <Form.Control type="text" placeholder="Price" />
-//                     <Form.Text className="text-muted">
-//                     Input the price you are willing to let your item go at!
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 {/* Upload a photo */}
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Photo</Form.Label>
-//                     <Form.Control type="text" placeholder="Title" />
-//                     <Form.Text className="text-muted">
-//                     Upload a great photo!
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicEmail">
-//                     <Form.Label>Email address</Form.Label>
-//                     <Form.Control type="email" placeholder="Enter email" />
-//                     <Form.Text className="text-muted">
-//                     We'll never share your email with anyone else.
-//                     </Form.Text>
-//                 </Form.Group>
-
-//                 <Form.Group className="mb-3" controlId="formBasicPassword">
-//                     <Form.Label>Password</Form.Label>
-//                     <Form.Control type="password" placeholder="Password" />
-//                 </Form.Group>
-//                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-//                     <Form.Check type="checkbox" label="Check me out" />
-//                 </Form.Group>
-//                 <Button variant="primary" type="submit">
-//                     Submit
-//                 </Button>
-//             </Form>
-//         </FormContainer>
-        
-//     )
-// }
-
-// export default Post

@@ -2,14 +2,7 @@
   padding: 10rem 0;
   margin-top: -6rem;
   background-color: #0000ff;
-  /* background-color: #fff; */
-  /* width: 80vw; */
 }
-
-/* a {
-  text-decoration: none;
-  color: #fff;
-} */
 
 .heading {
   text-transform: uppercase;
@@ -68,7 +61,6 @@
   align-items: center;
   align-content: center;
   flex-direction: column;
-  /* flex-direction: row; */
 }
 
 .profileCard {
@@ -79,7 +71,6 @@
   align-items: center;
   justify-content: center;
   margin: 2rem 0;
-  /* padding: 20px; */
   box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
@@ -106,7 +97,6 @@
   font-weight: 900;
   font-size: 2.3rem;
   color: #333;
-  /* margin: 1.5rem 0; */
 }
 
 .job-title {
@@ -132,10 +122,6 @@
   height: 200px;
   padding: 5px;
 }
-
-/* .about p {
-  margin: 1rem;
-} */
 
 .profileCard .btn {
   padding: 1rem 2.5rem;
@@ -183,7 +169,6 @@
 }
 
 .fa-twitter-square:hover {
-  /* color: #45e19f; */
   color: #b045e1;
 }
 
@@ -200,7 +185,6 @@
 }
 
 .fa-github-square:hover {
-  /* color: #45e19f; */
   color: #b045e1;
 }
 
@@ -209,7 +193,6 @@
 }
 
 .fa-google-plus-square:hover {
-  /* color: #45e19f; */
   color: #b045e1;
 }
 
