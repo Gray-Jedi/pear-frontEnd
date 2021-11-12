@@ -15,7 +15,7 @@ Considering the current supply chain issues, it is tough to source particular/hi
 
 Pear is a peer to peer E-Commerce app that empowers users to post listings for their items and/or shop from the comfort of their homes. Sellers can post whole items and/or break the listing down by component and price them likewise. The buyer can search for individual parts or whole items. If a user is interested in the purchase, they can send a message to the seller and they can discuss it within the app's messaging component. Some rules are no haggling. The app will also pick the location for the transaction. Only face to face transactions. There will be a collection component that tracks a user's inventory of categorized items.
 
-![Landing](https://github.com/Gray-Jedi/blob/main/PEAR-FRONTEND/src/screens/images/Landing.jpg)
+![Landing](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Landing.jpg)
 ![Detail](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Detail.jpg)
 ![Order](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Order.jpg)
 ![Paypalcheckout](https://github.com/Gray-Jedi/pear-frontend/blob/main/src/screens/images/Paypalcheckout.jpg)
