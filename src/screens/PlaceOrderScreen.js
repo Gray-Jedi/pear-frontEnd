@@ -16,9 +16,9 @@ function PlaceOrderScreen({ history }) {
 
     // calculate checkout cart items
     cart.itemsPrice = cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
-    cart.shippingPrice = (cart.itemsPrice > 100 ? 0 : 10).toFixed(2)
+    // cart.shippingPrice = (cart.itemsPrice > 100 ? 0 : 10).toFixed(2)
     cart.taxPrice = Number((0.05) * cart.itemsPrice).toFixed(2)
-    cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2)
+    cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.taxPrice)).toFixed(2)
 
     // redirects back to payment method if payment method is empty when clicking "Place Order" Button
     if(!cart.paymentMethod) {
@@ -35,38 +35,36 @@ function PlaceOrderScreen({ history }) {
     const placeOrder = () => {
         dispatch(createOrder({
             orderItems: cart.cartItems,
-            shippingAddress: cart.shippingAddress,
+            locationAddress: cart.locationAddress,
             paymentMethod: cart.paymentMethod,
             itemsPrice: cart.itemsPrice,
-            shippingPrice: cart.shippingPrice,
+            // shippingPrice: cart.shippingPrice,
             taxPrice: cart.taxPrice,
             totalPrice: cart.totalPrice,
         }))
     }
 
     return (
-        <div>
+        <div className='mt-5'>
             <CheckoutSteps step1 step2 step3 step4 />
             <Row>
                 <Col md={8}>
                     <ListGroup variant='flush' >
 
                         <ListGroup.Item>
-                            <h2>Billing Address</h2>
+                            <h2>Location Address</h2>
                             <p>
-                                <strong>Address: </strong>
-                                {cart.shippingAddress.address}, {cart.shippingAddress.city}
+                                {cart.locationAddress.address}, {cart.locationAddress.city}
                                 {'  '}
-                                {cart.shippingAddress.postal},
+                                {cart.locationAddress.postal},
                                 {' '}
-                                {cart.shippingAddress.country}
+                                {cart.locationAddress.country}
                             </p>
                         </ListGroup.Item>
 
                         <ListGroup.Item>
                             <h2>Payment Method</h2>
                             <p>
-                                <strong>Method: </strong>
                                 {cart.paymentMethod}
                             </p>
                         </ListGroup.Item>
@@ -114,13 +112,6 @@ function PlaceOrderScreen({ history }) {
                                     <Col>${cart.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
-
-                            {/* <ListGroup.Item>
-                                <Row>
-                                    <Col>Shipping:</Col>
-                                    <Col>${cart.shippingPrice}</Col>
-                                </Row>
-                            </ListGroup.Item> */}
 
                             <ListGroup.Item>
                                 <Row>

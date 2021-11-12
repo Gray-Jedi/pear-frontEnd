@@ -1,29 +1,29 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { productListReducer, productDetailsReducer, productDeleteReducer, productUpdateReducer} from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers'
-import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer , userListReducer, userDeleteReducer} from './reducers/userReducers'
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer, orderListMyReducer } from './reducers/orderReducers'
+import * as user_reducers from './reducers/userReducers'; 
+import * as order_reducers from './reducers/orderReducers';
+import * as product_reducers from './reducers/productReducers';
 
 const reducer = combineReducers({
-    userLogin: userLoginReducer,
-    userRegister: userRegisterReducer,
-    userDetails: userDetailsReducer,
-    userUpdateProfile: userUpdateProfileReducer,
-    userList: userListReducer,
-    userDelete: userDeleteReducer, 
+    userLogin: user_reducers.userLoginReducer,
+    userRegister: user_reducers.userRegisterReducer,
+    userDetails: user_reducers.userDetailsReducer,
+    userUpdateProfile: user_reducers.userUpdateProfileReducer,
+    userList: user_reducers.userListReducer,
+    userDelete: user_reducers.userDeleteReducer, 
 
     cart: cartReducer,
-    orderCreate: orderCreateReducer,
-    orderDetails: orderDetailsReducer,
+    orderCreate: order_reducers.orderCreateReducer,
+    orderDetails: order_reducers.orderDetailsReducer,
     
-    productList: productListReducer,
-    productDetails: productDetailsReducer,
-    productUpdate: productUpdateReducer,
-    productDelete: productDeleteReducer,
-    orderPay: orderPayReducer,
-    orderListMy: orderListMyReducer
+    productList: product_reducers.productListReducer,
+    productDetails: product_reducers.productDetailsReducer,
+    productUpdate: product_reducers.productUpdateReducer,
+    productDelete: product_reducers.productDeleteReducer,
+    orderPay: order_reducers.orderPayReducer,
+    orderListMy: order_reducers.orderListMyReducer
 })
 
 const cartItemsFromStorage = localStorage.getItem('cartItems') ?
@@ -32,13 +32,13 @@ const cartItemsFromStorage = localStorage.getItem('cartItems') ?
 const userInfoFromStorage = localStorage.getItem('userInfo') ?
         JSON.parse(localStorage.getItem('userInfo')) : null
 
-const shippingAddressFromStorage = localStorage.getItem('shippingAddress') ?
-        JSON.parse(localStorage.getItem('shippingAddress')) : {}
+const locationAddressFromStorage = localStorage.getItem('locationAddress') ?
+        JSON.parse(localStorage.getItem('locationAddress')) : {}
 
 const initialState = {
     cart: { 
         cartItems: cartItemsFromStorage,
-        shippingAddress: shippingAddressFromStorage,
+        locationAddress: locationAddressFromStorage,
     },
     userLogin: { 
         userInfo: userInfoFromStorage,
