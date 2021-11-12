@@ -1,19 +1,19 @@
 .about-container {
   padding: 10rem 0;
   margin-top: -6rem;
-  background-color: #0000FF ;
+  background-color: #0000ff;
   /* background-color: #fff; */
   /* width: 80vw; */
 }
 
-a {
+/* a {
   text-decoration: none;
   color: #fff;
-}
+} */
 
 .heading {
   text-transform: uppercase;
-  font-family: 'Megrim'; 
+  font-family: "Megrim";
   font-weight: 800;
   font-size: 3.5rem;
   letter-spacing: 3px;
@@ -43,11 +43,18 @@ a {
 .heading::after {
   content: "";
   width: 10rem;
-  height: .8rem;
-  background: #DCE35B;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #45B649, #DCE35B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  height: 0.8rem;
+  background: #dce35b; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #45b649,
+    #dce35b
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #45b649,
+    #dce35b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   position: absolute;
   bottom: -2rem;
@@ -73,7 +80,7 @@ a {
   justify-content: center;
   margin: 2rem 0;
   /* padding: 20px; */
-  box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.2);
 }
 
 .profileCard .card-img {
@@ -91,11 +98,11 @@ a {
   margin-top: -12rem;
   margin-bottom: 1.5rem;
   z-index: 999;
-  border: .2rem solid black;
+  border: 0.2rem solid black;
 }
 
 .profileCard h1 {
-  font-family: 'Megrim'; 
+  font-family: "Megrim";
   font-weight: 900;
   font-size: 2.3rem;
   color: #333;
@@ -138,12 +145,12 @@ a {
   text-transform: uppercase;
   color: #eee;
   font-size: 1.2rem;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .profileCard .btn:hover {
   transform: translateY(-1px);
-  box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .2);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .profileCard:hover {
@@ -152,7 +159,7 @@ a {
 }
 
 .profileCard {
-  transition: .5s;
+  transition: 0.5s;
   animation: ease-in;
 }
 
@@ -163,22 +170,21 @@ a {
   justify-content: space-evenly;
   padding: 2rem 0;
   margin-top: 1.5rem;
-  border-top: 1px solid rgba(0, 0, 0, .1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .social-media i {
   font-size: 2.6rem;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .fa-twitter-square {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .fa-twitter-square:hover {
   /* color: #45e19f; */
   color: #b045e1;
-
 }
 
 .fa-linkedin-in {
@@ -196,7 +202,6 @@ a {
 .fa-github-square:hover {
   /* color: #45e19f; */
   color: #b045e1;
-
 }
 
 .fa-google-plus-square {
@@ -206,7 +211,6 @@ a {
 .fa-google-plus-square:hover {
   /* color: #45e19f; */
   color: #b045e1;
-
 }
 
 @media screen and (min-width: 700px) {
@@ -221,22 +225,22 @@ a {
   }
   @keyframes fadeIn {
     from {
-      opacity: 0
+      opacity: 0;
     }
     to {
-      opacity: 1
+      opacity: 1;
     }
   }
   .profileCard:nth-child(1) {
-    animation: fadeIn 1s .3s backwards;
+    animation: fadeIn 1s 0.3s backwards;
   }
   .profileCard:nth-child(2) {
-    animation: fadeIn 1s .5s backwards;
+    animation: fadeIn 1s 0.5s backwards;
   }
   .profileCard:nth-child(3) {
-    animation: fadeIn 1s .7s backwards;
+    animation: fadeIn 1s 0.7s backwards;
   }
   .profileCard:nth-child(4) {
-    animation: fadeIn 1s .9s backwards;
+    animation: fadeIn 1s 0.9s backwards;
   }
 }
