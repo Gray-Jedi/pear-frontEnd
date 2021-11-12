@@ -14,13 +14,10 @@ function PlaceOrderScreen({ history }) {
     const dispatch = useDispatch()
     const cart = useSelector(state => state.cart)
 
-    // calculate checkout cart items
     cart.itemsPrice = cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0).toFixed(2)
-    // cart.shippingPrice = (cart.itemsPrice > 100 ? 0 : 10).toFixed(2)
     cart.taxPrice = Number((0.05) * cart.itemsPrice).toFixed(2)
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.taxPrice)).toFixed(2)
 
-    // redirects back to payment method if payment method is empty when clicking "Place Order" Button
     if(!cart.paymentMethod) {
         history.push('/payment')
     }
@@ -38,7 +35,6 @@ function PlaceOrderScreen({ history }) {
             locationAddress: cart.locationAddress,
             paymentMethod: cart.paymentMethod,
             itemsPrice: cart.itemsPrice,
-            // shippingPrice: cart.shippingPrice,
             taxPrice: cart.taxPrice,
             totalPrice: cart.totalPrice,
         }))
@@ -141,8 +137,6 @@ function PlaceOrderScreen({ history }) {
                                     Place Order
                                 </Button>
                             </ListGroup.Item>
-
-            
 
                         </ListGroup>
                     </Card>

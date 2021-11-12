@@ -4,7 +4,6 @@ import { CART_CLEAR_ITEMS } from '../constants/cartConstants'
 
 export const createOrder = (order) => async (dispatch, getState) => {
     try {
-        // dispatch(helper.description(actions.USER_UPDATE_PROFILE_REQUEST))
         dispatch({
             type: actions.ORDER_CREATE_REQUEST
         })
@@ -51,7 +50,6 @@ export const createOrder = (order) => async (dispatch, getState) => {
 
 export const getOrderDetails = (id) => async (dispatch, getState) => {
     try {
-        // dispatch(helper.description(actions.USER_UPDATE_PROFILE_REQUEST))
         dispatch({
             type: actions.ORDER_DETAILS_REQUEST
         })

@@ -86,4 +86,3 @@ function UserListScreen({history}) {
 }
 
 export default UserListScreen
-

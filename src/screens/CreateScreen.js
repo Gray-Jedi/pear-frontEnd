@@ -1,9 +1,7 @@
 import { useState, useCallback } from "react";
-// import { useHistory } from "react-router-dom";
 import axios from 'axios';
 import { Form, Button } from "react-bootstrap";
 import FormContainer from '../components/FormContainer'
-// import Tony from './tony.jpg'
 const Create = () => {
     
     const [users, setUsers ] = useState('');
@@ -34,8 +32,6 @@ const Create = () => {
         setCountInStock('countInStock');
         setCategory('category');
         setDescription('')
-        // setImage(formData)
-        // setUploading({formData})
         const newData = {
             user: users,
             name: name,

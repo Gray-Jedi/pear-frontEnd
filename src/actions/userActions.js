@@ -29,14 +29,6 @@ export const login = (email, password) => async (dispatch) => {
 
         dispatch(helper.description(actions.USER_LOGIN_FAIL, error.response.data.detail))
 
-
-        // dispatch({
-
-        //     type: actions.USER_LOGIN_FAIL,
-        //     payload: error.response && error.response.data.detail
-        //         ? error.response.data.detail
-        //         : error.message
-        // })
     }
 }
 
@@ -71,15 +63,8 @@ export const register = (name, email, password) => async (dispatch) => {
 
     } catch(error){
 
-        // Have not tested the helper.registerFail so left the original dispatch code commented out below
         dispatch(helper.description(actions.USER_REGISTER_FAIL, error.response.data.detail))
         
-        // dispatch({
-        //     type: actions.USER_REGISTER_FAIL,
-        //     payload: error.response && error.response.data.detail
-        //         ? error.response.data.detail
-        //         : error.message
-        // })
     }
 }
 
@@ -108,21 +93,13 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
 
     } catch(error){
 
-        // Have not tested the helper.registerFail so left the original dispatch code commented out below
         dispatch(helper.description(actions.USER_REGISTER_FAIL, error.response.data.detail))
 
-        // dispatch({
-        //     type: actions.USER_DETAILS_FAIL,
-        //     payload: error.response && error.response.data.detail
-        //         ? error.response.data.detail
-        //         : error.message
-        // })
     }
 }
 
 export const updateUserProfile = (user) => async (dispatch, getState) => {
     try {
-        // dispatch(helper.description(actions.USER_UPDATE_PROFILE_REQUEST))
         dispatch({
             type: actions.USER_UPDATE_PROFILE_REQUEST
         })

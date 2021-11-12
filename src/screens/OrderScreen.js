@@ -53,14 +53,6 @@ function OrderScreen({ match }) {
         dispatch(payOrder(orderId, paymentResult))
     }
 
-
-    // Tony Code
-    // useEffect(() => {
-    //     if(!order || order._id !== Number(orderId)){
-    //         dispatch(getOrderDetails(orderId))
-    //     }
-    // }, [order, orderId])
-
     return loading ? (
         <Loader/>
     ) : error ? (

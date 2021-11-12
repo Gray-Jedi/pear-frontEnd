@@ -7,11 +7,8 @@ import { Message } from '../components/Message'
 import Paginate from '../components/Paginate'
 import { listProducts, deleteProduct, createProduct } from '../actions/productActions'
 import { PRODUCT_CREATE_RESET } from '../constants/productConstants'
-// import CustomModal from '../components/CustomModal'
 import { Modal } from 'react-bootstrap'
 function PostScreen({ history, match }) {
-    // const [ isOpen, setIsOpen ] = useState(false)
-    // const { showModal, hideModal } = CustomModal
     const dispatch = useDispatch()
     const productList = useSelector(state => state.productList)
     const { loading, error, products, pages, page } = productList
